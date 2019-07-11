@@ -1,4 +1,4 @@
-#!groovydisplay
+#!groovy
 build('swag-dark-api', 'docker-host') {
   checkoutRepo()
   loadBuildUtils()
