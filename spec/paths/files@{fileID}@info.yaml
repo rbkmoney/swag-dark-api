@@ -1,4 +1,4 @@
-post:
+get:
   description: Получить информацию о файле
   tags:
     - Files
