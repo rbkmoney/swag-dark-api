@@ -1,8 +1,8 @@
 get:
   description: Получить ссылку для скачивания файла
+  operationId: downloadFile
   tags:
     - Files
-  operationId: downloadFile
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'

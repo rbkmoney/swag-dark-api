@@ -1,8 +1,8 @@
 get:
   description: Получить информацию о файле
+  operationId: getFileInfo
   tags:
     - Files
-  operationId: getFileInfo
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'

@@ -1,8 +1,8 @@
 post:
   description: Создать новый файл и сгенерировать ссылку для выгрузки файла на сервер
+  operationId: uploadFile
   tags:
     - Files
-  operationId: uploadFile
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
