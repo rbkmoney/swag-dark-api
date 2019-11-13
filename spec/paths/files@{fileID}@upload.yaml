@@ -1,0 +1,37 @@
+post:
+  description: Создать новый файл и сгенерировать ссылку для выгрузки файла на сервер
+  tags:
+    - Files
+  operationId: uploadFile
+  parameters:
+    - $ref: '#/parameters/requestID'
+    - $ref: '#/parameters/deadline'
+    - name: fileName
+        in: body
+        description: Имя файла
+        required: true
+        type: string
+        maxLength: 40
+        minLength: 1
+    - name: metadata
+      in: body
+      description: Дополнительная информация о файле
+      required: false
+      type: object
+    - name: expiresAt
+      in: body
+      description: время до которого ссылка будет считаться действительной
+      required: true
+      type: string
+      format: date-time
+  responses:
+    '201':
+      description: Данные для загрузки файла на сервер
+      schema:
+        $ref: '#/definitions/FileUploadData'
+    '400':
+      $ref: '#/responses/BadRequest'
+    '401':
+      $ref: '#/responses/Unauthorized'
+    '404':
+      $ref: '#/responses/NotFound'

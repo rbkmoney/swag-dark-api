@@ -1,0 +1,8 @@
+type: object
+allOf:
+  - $ref: '#/definitions/FileData'
+  - type: object
+    properties:
+      url:
+        description: URL файла
+        type: string
