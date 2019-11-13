@@ -54,6 +54,10 @@ responses:
     description: Неверные данные
     schema:
       $ref: '#/definitions/DefaultLogicError'
+  BadRequst:
+    description: Некорректный запрос
+    schema:
+      $ref: '#/definitions/GeneralError'
 
 parameters:
   requestID:
