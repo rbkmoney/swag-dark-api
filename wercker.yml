@@ -8,11 +8,14 @@ build:
       name: build docsite
       code: npm run build -- ${WERCKER_OUTPUT_DIR}
 
-deploy:
+release-v:
   steps:
+    - script:
+      name: prepare release artifacts for branch v1, v2, etc.
+      code: mkdir -p out && cp ./swagger.{yaml,json} out/
     - lukevivier/gh-pages:
-      repo: rbkmoney/dark-api-ghpages
-      token: ${GITHUB_API_TOKEN}
+        repo: rbkmoney/dark-api-ghpages
+        token: ${GITHUB_API_TOKEN}
   after-steps:
     - slack-notifier:
       url: ${SLACK_WEBHOOK_URL}
