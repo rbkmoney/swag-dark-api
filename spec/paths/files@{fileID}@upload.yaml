@@ -7,12 +7,12 @@ post:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
     - name: fileName
-        in: body
-        description: Имя файла
-        required: true
-        type: string
-        maxLength: 40
-        minLength: 1
+      in: body
+      description: Имя файла
+      required: true
+      type: string
+      maxLength: 40
+      minLength: 1
     - name: metadata
       in: body
       description: Дополнительная информация о файле
