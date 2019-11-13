@@ -24,3 +24,5 @@ properties:
   metadata:
     description: Дополнительная информация о файле
     type: object
+    additionalProperties:
+      type: string

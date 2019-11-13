@@ -6,21 +6,10 @@ post:
   parameters:
     - $ref: '#/parameters/requestID'
     - $ref: '#/parameters/deadline'
-    - name: fileName
-      description: Имя файла
-      required: true
-      type: string
-      maxLength: 40
-      minLength: 1
-    - name: metadata
-      description: Дополнительная информация о файле
-      required: false
-      type: object
-    - name: expiresAt
-      description: время до которого ссылка будет считаться действительной
-      required: true
-      type: string
-      format: date-time
+    - name: uploadFileRequest
+      in: body
+      schema:
+        $ref: '#/definitions/FileUploadRequest'
   responses:
     '201':
       description: Данные для загрузки файла на сервер
