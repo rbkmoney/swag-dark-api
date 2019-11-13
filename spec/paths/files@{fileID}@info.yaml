@@ -8,7 +8,7 @@ get:
     - $ref: '#/parameters/deadline'
     - $ref: '#/parameters/fileID'
   responses:
-    '201':
+    '200':
       description: Данные файла
       schema:
         $ref: '#/definitions/FileData'

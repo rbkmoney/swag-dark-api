@@ -17,7 +17,7 @@ post:
       in: body
       description: Дополнительная информация о файле
       required: false
-      type: object
+      type: string
     - name: expiresAt
       in: body
       description: время до которого ссылка будет считаться действительной
